@@ -16,3 +16,20 @@ A spectral and spatial CEST simulation tool
 
 ![](./ref_pic/Installation.png)
 
+
+
+## Customizing CESTsimu
+
+The source code of the CESTsimu is uploaded and named as `CESTsimu_vxx.mlapp`. You can customize the GUI using the **MATLAB App Designer**.
+
+First open the .MLAPP file using the **MATLAB App Designer**, as follow:
+
+![](./ref_pic/MATLAB-App-Designer-1.png)
+
+Then you can modify the UI component in the **Design View**.
+
+![](./ref_pic/MATLAB-App-Designer-2.png)
+
+You can also switch to the **Code View**, and modify the Functions or the Callbacks.
+
+![](./ref_pic/MATLAB-App-Designer-3.png)
