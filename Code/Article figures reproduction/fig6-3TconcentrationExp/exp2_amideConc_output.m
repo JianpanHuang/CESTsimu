@@ -1,5 +1,5 @@
 % display MPLF results and output
-% 2024-0827
+% 2024-0701
 clear
 close all
 
@@ -9,7 +9,7 @@ linwid = 1.5;
 fonts_axis = 10;
 fonts_leg = 8;
 markersiz = 2;
-writeflag = 0;
+writeflag = 1;
 
 fraction = 0:5:40; % mM
 zupbound = 0.07;
@@ -20,8 +20,8 @@ patchcol = "#f06464";
 
 %% load files 
 filelist = ["exp2_amide_40mM_wonoise_mplf",...
-            "exp2_amide_40mM_wnoise_0.04_mplf",...
-            "exp2_amide_40mM_wnoise_0.08_mplf"];
+            "exp2_amide_40mM_wnoise_0.0016_mplf",...
+            "exp2_amide_40mM_wnoise_0.0064_mplf"];
 load(filelist(1),'apt','roi'); apt_1 = apt;
 load(filelist(2),'apt'); apt_2 = apt;
 load(filelist(3),'apt'); apt_3 = apt;
@@ -46,7 +46,7 @@ Fig2 = figure(2);imshow(apt_2,[])
 colormap(colormapLegend)
 colorbar
 clim([0,zupbound])
-title("amide \sigma=0.04")
+title("amide \sigma=0.0016")
 set(gca,'Position',[0.1,0.1,0.7,0.8],'fontname','arial','fontsize',fonts_axis,'FontName','Times New Roman');
 set(gcf,'Position',[400 600 300 300]);
 
@@ -54,7 +54,7 @@ Fig3 = figure(3);imshow(apt_3,[])
 colormap(colormapLegend)
 colorbar
 clim([0,zupbound])
-title("amide \sigma=0.08")
+title("amide \sigma=0.0064")
 set(gca,'Position',[0.1,0.1,0.7,0.8],'fontname','arial','fontsize',fonts_axis,'FontName','Times New Roman');
 set(gcf,'Position',[700 600 300 300]);
 
@@ -83,7 +83,7 @@ end
 % sigma = 0
 Fig4 = figure(4);hold on
 [fitresult,gof] = fit(XData(:),YData_1(:),'poly1');
-fprintf("sigma=0.00: [SSE, R2] = [%.4f,%.4f]\n",gof.sse,gof.rsquare)
+fprintf("sigma=0.0000: [SSE, R2] = [%.4f,%.4f]\n",gof.sse,gof.rsquare)
 pred = predint(fitresult,XData(:),0.95,'observation','on');
 
 plot(XData(:),YData_1(:),'h','Color',[0,0.45,0.74],'MarkerSize',markersiz,'LineWidth',linwid-0.5)
@@ -103,7 +103,7 @@ set(gcf,'Position',[100 300 300 250]);
 % sigma = 0.04
 Fig5 = figure(5);hold on
 [fitresult,gof] = fit(XData(:),YData_2(:),'poly1');
-fprintf("sigma=0.04: [SSE, R2] = [%.4f,%.4f]\n",gof.sse,gof.rsquare)
+fprintf("sigma=0.0016: [SSE, R2] = [%.4f,%.4f]\n",gof.sse,gof.rsquare)
 pred = predint(fitresult,XData(:),0.95,'observation','on');
 
 plot(XData(:),YData_2(:),'h','Color',[0,0.45,0.74],'MarkerSize',markersiz,'LineWidth',linwid-0.5)
@@ -123,7 +123,7 @@ set(gcf,'Position',[400 300 300 250]);
 % sigma = 0.08
 Fig6 = figure(6);hold on
 [fitresult,gof] = fit(XData(:),YData_3(:),'poly1');
-fprintf("sigma=0.08: [SSE, R2] = [%.4f,%.4f]\n",gof.sse,gof.rsquare)
+fprintf("sigma=0.0064: [SSE, R2] = [%.4f,%.4f]\n",gof.sse,gof.rsquare)
 pred = predint(fitresult,XData(:),0.95,'observation','on');
 
 plot(XData(:),YData_3(:),'h','Color',[0,0.45,0.74],'MarkerSize',markersiz,'LineWidth',linwid-0.5)

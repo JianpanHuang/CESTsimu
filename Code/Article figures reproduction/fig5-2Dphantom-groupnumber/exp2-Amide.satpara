@@ -1,32 +1,32 @@
 
-============= CESTsimu, version 0.6 =========
-Generate date: 2024-08-27 20:22:19
+============= CESTsimu, version 0.7 =========
+Generate date: 2024-11-20 23:41:12
 
-#=============== B0 info ====================              
-B0 (T)                 :            3.0
-B0 inhomogeneity  (ppm):              0
-                                       
-#=============== Frequency offsets ==========              
-Freq. offset mod       :      Set offs.
-Freq. offset M0   (ppm):           -300
-Freq. offset from (ppm):            -10
-Freq. offset to   (ppm):             10
-Freq. offset step (ppm):           0.05
-                                       
-#=============== Pulse info =================              
-Post pulse delay(ms)   :            6.5
-Shape                  :             CW
-B1_max (uT)            :            0.8
-B1_rms (uT)            :            0.8
-B1 inhom.              :              1
-Pulse width (ms)       :           2000
-Pulse gap (ms)         :              0
-Pulse repeat           :              1
-Pulse phase cycle (deg):        0,0,0,0
-Compensate accum. phase:              1
-Recovery time          :              3
-Reset init. mag.       :              1
-                                       
-#=============== Pulse waveform ===========              
+#=============== B0 info ====================                
+B0 (T)                 :                3
+B0 inhomogeneity  (ppm):                0
+                                         
+#=============== Frequency offsets ==========                
+Freq. offset mod       :        Set offs.
+Freq. offset M0   (ppm):             -300
+Freq. offset from (ppm):              -10
+Freq. offset to   (ppm):               10
+Freq. offset step (ppm):             0.05
+                                         
+#=============== Pulse info =================                
+Post pulse delay(ms)   :              6.5
+Shape type             :               CW
+B1_max (uT)            :              0.8
+B1_rms (uT)            :              0.8
+B1 inhom.              :                1
+Pulse width (ms)       :             2000
+Pulse gap (ms)         :                0
+Pulse repeat           :                1
+Pulse phase cycle (deg):          0,0,0,0
+Compensate accum. phase:                1
+Recovery time (s)      :                3
+Reset init. mag.       :                1
+                                         
+#=============== Pulse waveform ===========                
 # num_samples 1
 1

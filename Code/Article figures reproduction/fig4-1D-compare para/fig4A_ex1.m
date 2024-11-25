@@ -1,7 +1,7 @@
-% plot Z-spectra of various B0
+% plot Z-spectra of various Trec (recovery time, gap before saturation)
 linwid = 1.5;
 
-load a_B0_add47T.mat
+load a_Trec.mat
 Fig = figure();
 hold on;
 colororder(jet(length(zspecHoldonCell)));
@@ -17,9 +17,11 @@ hold off
 
 xlabel("Offset [ppm]");
 ylabel("Z");
+ylim([0.65,0.85])
+xlim([2,8])
 set(gca,'fontsize',18,'XDir', 'reverse');
 
-legend("B0=11.7T","B0=9.4T","B0=7.0T","B0=5.0T","B0=4.7T","B0=3.0T","B0=1.5T",'fontsize',8);
+legend("Trec=Inf","Trec=2.0s","Trec=1.5s","Trec=1.0s","Trec=0.5s","Trec=0.2s","Trec=0.0s",'fontsize',9);
 
 
 % print(Fig,"fig2A_ex1","-dpng","-r600")
@@ -27,4 +29,4 @@ legend("B0=11.7T","B0=9.4T","B0=7.0T","B0=5.0T","B0=4.7T","B0=3.0T","B0=1.5T",'f
 
 resol = '-r600'; 
 imgType = '-dpng';
-print(Fig,"Out\fig4A_ex1",imgType,resol);
+% print(Fig,"Out\fig2A_ex1",imgType,resol);

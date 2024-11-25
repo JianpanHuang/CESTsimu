@@ -1,0 +1,32 @@
+
+============= CESTsimu, version 0.7 =========
+Generate date: 2024-11-21 17:27:51
+
+#=============== B0 info ====================               
+B0 (T)                 :               3
+B0 inhomogeneity  (ppm):               0
+                                        
+#=============== Frequency offsets ==========               
+Freq. offset mod       :       Set offs.
+Freq. offset M0   (ppm):            -300
+Freq. offset from (ppm):              -2
+Freq. offset to   (ppm):               2
+Freq. offset step (ppm):            0.05
+                                        
+#=============== Pulse info =================               
+Post pulse delay(ms)   :               0
+Shape type             :              CW
+B1_max (uT)            :             3.7
+B1_rms (uT)            :             3.7
+B1 inhom.              :               1
+Pulse width (ms)       :               5
+Pulse gap (ms)         :               0
+Pulse repeat           :               1
+Pulse phase cycle (deg):         0,0,0,0
+Compensate accum. phase:               1
+Recovery time (s)      :               2
+Reset init. mag.       :               1
+                                        
+#=============== Pulse waveform ===========               
+# num_samples 1
+1
