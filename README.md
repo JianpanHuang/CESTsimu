@@ -3,7 +3,17 @@ A spectral and spatial CEST simulation tool
 
 ## Layout
 
+Overall layout of CESTsimu
+
 ![](./ref_pic/CESTsimu-layout.png)
+
+Extend RF design window (added in CESTsimu v07)
+
+<img src="./ref_pic/window_RFdeisgn.png" style="zoom: 33%;" />
+
+2D phantom experiment setting window (added in CESTsimu v07)
+
+<img src="./ref_pic/window_2DPhantomExperiment.png" style="zoom: 25%;" />
 
 ## Abstract
 
@@ -11,10 +21,18 @@ A spectral and spatial CEST simulation tool
 
 ## Installation and use
 
-- CESTsimu is developed using MATLAB 2023a, so if your version of MATLAB is earlier than 2023a, please update your MATLAB.
+- CESTsimu is developed using MATLAB 2024b, so if your version of MATLAB is earlier than 2024b, try update your MATLAB when encountering problems.
 - In MATLAB, navigate to the CESTsimu folder, open **CESTsimu.mlappinstall** and install. Then you will find CESTsimu in the "Apps" tab, in the "My apps" group. Click on it to execute the app.
 
 ![](./ref_pic/Installation.png)
+
+
+
+## Toolbox dependency
+
+No additional MATLAB toolbox (e.g., Signal Processing Toolbox) is required for CESTsimu.
+
+![](./ref_pic/ToolboxDependency.png)
 
 
 
