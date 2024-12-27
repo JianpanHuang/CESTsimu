@@ -4,6 +4,17 @@
 - inter-pulse spoil (extent tab): reset Mxy inside the solver
 - simulation using MT lineshape (e.g., super-Lorentzian)
 
+## CESTsimu v0.71 (20241227)
+
+### Bug Fixes
+
+- Correct the typo of "Quick setting" of the 2D phantom experiment setting window
+
+### Updates
+
+- Save "zspecBatch_m0" variable to the output .MAT file.
+  - PS: When generating **1D Z-spectra data**, CESTsimu stores the Z-value at the M0 offset along with other frequency offsets in the “zspecHoldonCell” variable. When **generating 2D phantom data**, CESTsimu stores the (ROI-averaged) Z-value at the M0 offset in a separate “zspecBatch_m0” variable.
+
 ## CESTsimu v0.7 (20241111)
 
 ### Bug Fixes

@@ -1,13 +1,12 @@
-% plot Z-spectra of various B1
-clear
+% plot Z-spectra of various B0
 linwid = 1.5;
 
-load b_B1.mat
+load a_B0_add47T.mat
 Fig = figure();
 hold on;
 colororder(jet(length(zspecHoldonCell)));
 
-for idx = 1:length(zspecHoldonCell)
+for idx = length(zspecHoldonCell):-1:1
     temp = zspecHoldonCell{idx};
     offs = temp(:,1);
     zspec = temp(:,2);
@@ -20,8 +19,12 @@ xlabel("Offset [ppm]");
 ylabel("Z");
 set(gca,'fontsize',18,'XDir', 'reverse');
 
-legend("B1=0.8uT","B1=1.6uT","B1=2.4uT","B1=3.0uT","B1=3.7uT",'fontsize',7,'location','southeast');
+legend("B0=11.7T","B0=9.4T","B0=7.0T","B0=5.0T","B0=4.7T","B0=3.0T","B0=1.5T",'fontsize',8);
+
+
+% print(Fig,"fig2A_ex1","-dpng","-r600")
+% or can use "save as" after manually adjusting legend position
 
 resol = '-r600'; 
 imgType = '-dpng';
-% print(Fig,"Out\fig2B_ex2",imgType,resol);
+print(Fig,"Out\fig2A_ex1",imgType,resol);

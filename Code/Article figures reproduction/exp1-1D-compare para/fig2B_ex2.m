@@ -1,10 +1,8 @@
-% plot Z-spectra of various Tsat
+% plot Z-spectra of various B1
 clear
 linwid = 1.5;
-resol = '-r600'; 
-imgType = '-dpng';
 
-load c_Tsat.mat
+load b_B1.mat
 Fig = figure();
 hold on;
 colororder(jet(length(zspecHoldonCell)));
@@ -22,7 +20,8 @@ xlabel("Offset [ppm]");
 ylabel("Z");
 set(gca,'fontsize',18,'XDir', 'reverse');
 
-legend("Tsat=0.5s","Tsat=1.0s","Tsat=2.0s","Tsat=3.0s",'fontsize',10,'location','southeast');
+legend("B1=0.8uT","B1=1.6uT","B1=2.4uT","B1=3.0uT","B1=3.7uT",'fontsize',7,'location','southeast');
 
-OutputDir = ".\Out";
-% print(Fig,OutputDir+"fig2C_ex3",imgType,resol);
+resol = '-r600'; 
+imgType = '-dpng';
+print(Fig,"Out\fig2B_ex2",imgType,resol);

@@ -13,7 +13,7 @@ Extend RF design window (added in CESTsimu v07)
 
 2D phantom experiment setting window (added in CESTsimu v07)
 
-<img src="./ref_pic/window_2DPhantomExperiment.png" style="zoom: 25%;" />
+<img src="./ref_pic/image-20241227204424892.png" alt="image-20241227204424892" style="zoom:25%;" />
 
 ## Abstract
 
