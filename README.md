@@ -2,6 +2,7 @@
 A spectral and spatial CEST simulation tool
 
 If you use the code, please consider citing our paper: 
+
 Zhang H, Qiu B, Xu J, Chan KWY, Huang J*. CESTsimu: An open-source GUI for spectral and spatial CEST simulation. Magnetic Resonance in Medicine 2025. DOI: https://doi.org/10.1002/mrm.30430.
 
 ## Layout
