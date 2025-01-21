@@ -1,5 +1,7 @@
 # CESTsimu
-A spectral and spatial CEST simulation tool
+A spectral and spatial CEST simulation tool.
+
+Please find the related paper on http://doi.org/10.1002/mrm.30430 or in the folder [ref_paper](.\ref_paper\20250121-CESTsimu-online(MRM).pdf) for more details.
 
 If you use CESTsimu or its source code, please consider citing our paper: 
 
