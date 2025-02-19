@@ -9,8 +9,8 @@ addpath .\func
 
 %% load data
 filelist = ["exp2_amide_40mM_wonoise",...
-            "exp2_amide_40mM_wnoise_0.04",...
-            "exp2_amide_40mM_wnoise_0.08"];
+            "exp2_amide_40mM_wnoise_0.0016",...
+            "exp2_amide_40mM_wnoise_0.0064"];
 for idx = 1:length(filelist)
     filename = filelist(idx);
         % img: [nx,ny,nf]
@@ -18,7 +18,7 @@ for idx = 1:length(filelist)
         % offs: [1,nf]
         % roi: [nx,ny]
     
-    load(filename);
+    load(filename,'img','img_m0','offs','roi');
     
     %% z-spectrum normalization
     img = permute(img,[1,2,4,3]);

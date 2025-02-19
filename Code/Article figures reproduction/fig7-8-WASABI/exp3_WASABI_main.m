@@ -4,8 +4,8 @@
 filename = "CESTsimudata_WASABI-2D";
 
 load(filename,'img','dataInfo','roi','img_m0','offs');
-B0map = dataInfo.saturation.B0inhomo_ppm;
-B1map = dataInfo.saturation.B1inhomo_relative;
+B0map = dataInfo.saturation.B0inhomoMap_ppm;
+B1map = dataInfo.saturation.B1inhomoMap_relative;
 img_cest = img;
 %   B0map: [128,128]
 %   B1map: [256,256]
@@ -34,7 +34,7 @@ B1map_WASABI = zeros(size(img_m0));
 zmap_WASABI  = zeros(size(img));
 
 % WASABI
-[fitresult_nz, zfit] = WASABI_fit_parallel(Z_vec(:,indnz), offs(:), tp, B0, B1pwr); % only fit non-zero pixel
+[fitresult_nz, zfit] = WASABI_fit(Z_vec(:,indnz), offs(:), tp, B0, B1pwr); % only fit non-zero pixel
 cmap_WASABI(indnz) = fitresult_nz(1,:);
 afmap_WASABI(indnz) = fitresult_nz(2,:);
 B1map_WASABI(indnz) = fitresult_nz(3,:);
